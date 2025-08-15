@@ -144,11 +144,21 @@ Per model:
 
 ## 7) GUI
 
-- Load any `_best.pth`; reads `classes` from checkpoint.
-- Single image or folder **batch** inference.
-- Shows **top-k** probs and predicted class.
-- Ensure **transforms match** the trained model’s input size (224/240/299/384).
+### Features
 
-Run:
+- **Upload a fundus image** (`jpg`, `jpeg`, `png`)  
+- **Automatic preprocessing**:
+  - ROI crop → Shade correction → Color constancy → CLAHE → Gamma correction → Unsharp → Letterbox  
+- **Supports all trained models**: ResNet, DenseNet, EfficientNet, InceptionV3, Inception-ResNet-v2, ConvNeXt  
+- Shows **predicted class** and **confidence score**  
+- **GPU/CPU support**: Uses `torch.device("cuda" if available else "cpu")`  
+- Handles **tuple outputs** for Inception models (auxiliary logits)
+
+---
+
+### Installation
+
+Install the required Python packages:
+
 ```bash
-python gui/app.py --checkpoint checkpoints/resnet50_best.pth --device cuda
+pip install torch torchvision timm opencv-python-headless streamlit pillow numpy
