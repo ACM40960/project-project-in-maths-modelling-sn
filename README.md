@@ -143,16 +143,16 @@ Per model:
 ---
 
 ## 7) GUI
+OcuScan provides a **Streamlit-based GUI** for single-image fundus classification using the **best model: Inception-ResNet-v2**.
 
 ### Features
 
 - **Upload a fundus image** (`jpg`, `jpeg`, `png`)  
 - **Automatic preprocessing**:
   - ROI crop → Shade correction → Color constancy → CLAHE → Gamma correction → Unsharp → Letterbox  
-- **Supports all trained models**: ResNet, DenseNet, EfficientNet, InceptionV3, Inception-ResNet-v2, ConvNeXt  
+- **Model supported**: **Inception-ResNet-v2 (best-performing model)**  
 - Shows **predicted class** and **confidence score**  
-- **GPU/CPU support**: Uses `torch.device("cuda" if available else "cpu")`  
-- Handles **tuple outputs** for Inception models (auxiliary logits)
+- **GPU/CPU support**: Uses `torch.device("cuda" if available else "cpu")` 
 
 ---
 
@@ -162,3 +162,17 @@ Install the required Python packages:
 
 ```bash
 pip install torch torchvision timm opencv-python-headless streamlit pillow numpy
+```
+
+### Launch the GUI
+`streamlit run app.py`
+
+### Using the GUI
+
+- **Upload Image**: Click the "Browse files" button and select a fundus image.
+- **View Image**: The uploaded image is displayed.
+- **Predict**: Click the "Predict" button to classify the image.
+- **Results**: The predicted class and confidence percentage are shown.
+
+### Example Interface
+<p align="center"> <img width="600" alt="streamlit_gui_example" src="images/gui_example.jpg"> </p>
