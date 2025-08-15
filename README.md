@@ -16,8 +16,9 @@ Comprehensive pipeline for fundus-image classification with a consistent **80/10
 ## 2) Data & Preprocessing
 The dataset has 4,728 fundus images across five classes. Most samples are diabetic_retinopathy (23.2%, 1,098), followed by normal (22.7%, 1,074), cataract (22.0%, 1,038), and glaucoma (21.3%, 1,007). ARMD is the smallest class at 10.8% (511). Overall it’s fairly balanced among four classes, with ARMD under-represented (largest:smallest ≈ 2.15×), so class-weighted loss or macro metrics are a good idea.
 
+
 <p align="center">
-  <img src="images/download(1).png" alt="Pie Chart of Class Distribution" width="480">
+<img width="350" height="350" alt="download" src="images/download (1).png" />
 </p>
 
 
@@ -50,7 +51,9 @@ All steps occur in **`preprocess_fundus(img_bgr, size)`** in this order:
 8. **Square letterbox + resize (`letterbox_square`)**  
    - Pads to square (no aspect distortion) and resizes to **224×224 or any other size** (cubic)
 
-> Each step returns `uint8` BGR for OpenCV.
+<p align="center">
+<img width="600" height="800" alt="download" src="images/preprocessing_pipeline.png" />
+</p>
 
 ---
 
@@ -123,19 +126,19 @@ Per model:
 
 ## 6) Results (fill in)
 
-| Model | Input | Epochs | Optim | Val Acc (best) | Test Acc | Macro AUC | Weighted AUC | Micro AUC | Notes | Checkpoint |
-|---|---:|---:|---|---:|---:|---:|---:|---:|---|---|
-| **ResNet-50** | 224 | 12 | Adam |  |  |  |  |  |  | `checkpoints/resnet50_best.pth` |
-| **ResNet-101** | 224 | 12 | Adam |  |  |  |  |  |  | `checkpoints/resnet101_best.pth` |
-| MobileNetV3-L | 224 | 10 | Adam |  |  |  |  |  |  | `checkpoints/mobilenetv3_best.pth` |
-| DenseNet-121 | 224 | 12 | Adam |  |  |  |  |  |  | `checkpoints/densenet121_best.pth` |
-| DenseNet-169 | 224 | 12 | Adam |  |  |  |  |  |  | `checkpoints/densenet169_best.pth` |
-| DenseNet-201 | 224 | 12 | Adam |  |  |  |  |  |  | `checkpoints/densenet201_best.pth` |
-| EffNet-B0 | 224 | 12 | Adam |  |  |  |  |  |  | `checkpoints/efficientnet_b0_best.pth` |
-| EffNet-B1 | 240 | 12 | Adam |  |  |  |  |  |  | `checkpoints/efficientnet_b1_best.pth` |
-| InceptionV3 | 299 | 12 | Adam |  |  |  |  |  | aux=0.4 | `checkpoints/inceptionv3_best.pth` |
-| Inc-ResNet-v2 | 299 | 12 | Adam |  |  |  |  |  | timm | `checkpoints/inception_resnet_v2_best.pth` |
-| ConvNeXt-T/S/B | 384 | 12 | AdamW |  |  |  |  |  | GA? | `checkpoints/convnext_384best.pth` |
+| Model           | Input | Epochs | Optim | Val Acc (best) | Test Acc | Macro AUC | Weighted AUC | Micro AUC | Checkpoint |
+|-----------------|------:|-------:|------|---------------:|---------:|----------:|-------------:|----------:|-----------|
+| ResNet-50       |   224 |     12 | Adam |                |          |           |              |           | [resnet50_best.pth](https://drive.google.com/file/d/RESNET50_ID/view?usp=sharing) |
+| ResNet-101      |   224 |     12 | Adam |                |          |           |              |           | [resnet101_best.pth](https://drive.google.com/file/d/RESNET101_ID/view?usp=sharing) |
+| MobileNetV3-L   |   224 |     10 | Adam |                |          |           |              |           | [mobilenetv3_best.pth](https://drive.google.com/file/d/MOBILENETV3_ID/view?usp=sharing) |
+| DenseNet-121    |   224 |     12 | Adam |                |          |           |              |           | [densenet121_best.pth](https://drive.google.com/file/d/DENSENET121_ID/view?usp=sharing) |
+| DenseNet-169    |   224 |     12 | Adam |                |          |           |              |           | [densenet169_best.pth](https://drive.google.com/file/d/DENSENET169_ID/view?usp=sharing) |
+| DenseNet-201    |   224 |     12 | Adam |                |          |           |              |           | [densenet201_best.pth](https://drive.google.com/file/d/DENSENET201_ID/view?usp=sharing) |
+| EffNet-B0       |   224 |     12 | Adam |                |          |           |              |           | [efficientnet_b0_best.pth](https://drive.google.com/file/d/EFFNETB0_ID/view?usp=sharing) |
+| EffNet-B1       |   240 |     12 | Adam |                |          |           |              |           | [efficientnet_b1_best.pth](https://drive.google.com/file/d/EFFNETB1_ID/view?usp=sharing) |
+| InceptionV3     |   299 |     12 | Adam |                |          |           |              |           | [inceptionv3_best.pth](https://drive.google.com/file/d/INCEPTIONV3_ID/view?usp=sharing) |
+| Inc-ResNet-v2   |   299 |     12 | Adam |                |          |           |              |           | [inception_resnet_v2_best.pth](https://drive.google.com/file/d/INCRESNETV2_ID/view?usp=sharing) |
+| ConvNeXt-T/S/B  |   384 |     12 | AdamW|                |          |           |              |           | [convnext_384best.pth](https://drive.google.com/file/d/CONVNEXT384_ID/view?usp=sharing) |
 
 
 ---
