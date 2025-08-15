@@ -126,7 +126,7 @@ Per model:
 
 ## 6) Results (fill in)
 
-| Model           | Input | Epochs | Optim | Val Acc (best) | Test Acc | Macro AUC | Weighted AUC | Micro AUC | Checkpoint |
+| Model           | Input | Epochs | Optim | Val Acc (best) | Test Acc | Macro AUC | Weighted AUC | Micro AUC | Checkpoint (UCD GDrive)|
 |-----------------|------:|-------:|------|---------------:|---------:|----------:|-------------:|----------:|-----------|
 | ResNet-50       |   224 |     12 | Adam |                |          |           |              |           | [resnet50_best.pth](https://drive.google.com/file/d/RESNET50_ID/view?usp=sharing) |
 | ResNet-101      |   224 |     12 | Adam |                |          |           |              |           | [resnet101_best.pth](https://drive.google.com/file/d/RESNET101_ID/view?usp=sharing) |
