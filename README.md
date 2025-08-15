@@ -113,18 +113,8 @@ All use the same split protocol and training loop style (Adam/AdamW, ReduceLROnP
 
 ---
 
-## 5) Evaluation
 
-Per model:
-- **Classification report** (precision/recall/F1 per class)
-- **Confusion matrix**
-- **AUC (OVR)**: macro / weighted / micro (safe for missing classes)
-- **ROC curves** (per class)
-- **Train/Val curves** (acc, loss)
-
----
-
-## 6) Results (fill in)
+## 5) Results (fill in)
 
 | Model           | Input | Epochs | Optim | Val Acc (best) | Test Acc | Macro AUC | Weighted AUC | Micro AUC | Checkpoint (UCD GDrive)|
 |-----------------|------:|-------:|------|---------------:|---------:|----------:|-------------:|----------:|-----------|
@@ -140,7 +130,16 @@ Per model:
 | Inc-ResNet-v2   |   299 |     12 | Adam |                |          |           |              |           | [inception_resnet_v2_best.pth](https://drive.google.com/file/d/INCRESNETV2_ID/view?usp=sharing) |
 | ConvNeXt-T/S/B  |   384 |     12 | AdamW|                |          |           |              |           | [convnext_384best.pth](https://drive.google.com/file/d/CONVNEXT384_ID/view?usp=sharing) |
 
+---
 
+## 6) Evaluation
+
+Per model:
+- **Classification report** (precision/recall/F1 per class)
+- **Confusion matrix**
+- **AUC (OVR)**: macro / weighted / micro (safe for missing classes)
+- **ROC curves** (per class)
+- **Train/Val curves** (acc, loss)
 ---
 
 ## 7) GUI
