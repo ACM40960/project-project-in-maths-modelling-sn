@@ -16,7 +16,9 @@ Comprehensive pipeline for fundus-image classification with a consistent **80/10
 ## 2) Data & Preprocessing
 The dataset has 4,728 fundus images across five classes. Most samples are diabetic_retinopathy (23.2%, 1,098), followed by normal (22.7%, 1,074), cataract (22.0%, 1,038), and glaucoma (21.3%, 1,007). ARMD is the smallest class at 10.8% (511). Overall it’s fairly balanced among four classes, with ARMD under-represented (largest:smallest ≈ 2.15×), so class-weighted loss or macro metrics are a good idea.
 
-![Pie chart of Class Distribution](images/download(1).png)
+<p align="center">
+  <img src="images/download(1).png" alt="Pie Chart of Class Distribution" width="480">
+</p>
 
 
 ### Core preprocessing steps (fundus-specific)
