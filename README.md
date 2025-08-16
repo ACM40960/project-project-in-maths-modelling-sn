@@ -120,7 +120,7 @@ All use the same split protocol and training loop style (Adam/AdamW, ReduceLROnP
 |-----------------|------:|-------:|------|---------------:|---------:|----------:|-------------:|----------:|-----------|
 | ResNet-50       |   224 |     12 | Adam |                |          |           |              |           | [resnet50_best.pth](https://drive.google.com/file/d/RESNET50_ID/view?usp=sharing) |
 | ResNet-101      |   224 |     12 | Adam |                |          |           |              |           | [resnet101_best.pth](https://drive.google.com/file/d/RESNET101_ID/view?usp=sharing) |
-| MobileNetV3-L   |   224 |     10 | Adam |                |          |           |              |           | [mobilenetv3_best.pth](https://drive.google.com/file/d/MOBILENETV3_ID/view?usp=sharing) |
+| MobileNetV3-L   |   224 |     12 | Adam |                |          |           |              |           | [mobilenetv3_best.pth](https://drive.google.com/file/d/MOBILENETV3_ID/view?usp=sharing) |
 | DenseNet-121    |   224 |     12 | Adam |                |          |           |              |           | [densenet121_best.pth](https://drive.google.com/file/d/DENSENET121_ID/view?usp=sharing) |
 | DenseNet-169    |   224 |     12 | Adam |                |          |           |              |           | [densenet169_best.pth](https://drive.google.com/file/d/DENSENET169_ID/view?usp=sharing) |
 | DenseNet-201    |   224 |     12 | Adam |                |          |           |              |           | [densenet201_best.pth](https://drive.google.com/file/d/DENSENET201_ID/view?usp=sharing) |
