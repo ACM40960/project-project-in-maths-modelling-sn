@@ -129,6 +129,8 @@ All use the same split protocol and training loop style (Adam/AdamW, ReduceLROnP
 | InceptionV3         | 299   | 12     | Adam | 0.9281         | 0.9302   | 0.9904    | 0.9895       | 0.9919    | [inceptionv3_best.pth](https://drive.google.com/file/d/INCEPTIONV3_ID/view?usp=sharing) |
 | Inception-ResNet-v2 | 299   | 12     | Adam | 0.9302         | 0.9408   | 0.9910    | 0.9901       | 0.9936    | [inception_resnet_v2_best.pth](https://drive.google.com/file/d/INCRESNETV2_ID/view?usp=sharing) |
 | ConvNeXt-T/S/B       | 384   | 12     | AdamW| 0.9345         | 0.9302   | 0.9859    | 0.9847       | 0.9890    | [convnext_384best.pth](https://drive.google.com/file/d/CONVNEXT384_ID/view?usp=sharing) |
+| ViT-B/16            | 224   | 12     | AdamW| 0.9175         | 0.9133   | 0.9804    | 0.9786       | 0.9815    | [vitb16_best.pth](#) |
+
 
 ---
 
