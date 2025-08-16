@@ -114,21 +114,21 @@ All use the same split protocol and training loop style (Adam/AdamW, ReduceLROnP
 ---
 
 
-## 5) Results (fill in)
+## 5) Fundus Image Classification Models - Results
 
-| Model           | Input | Epochs | Optim | Val Acc (best) | Test Acc | Macro AUC | Weighted AUC | Micro AUC | Checkpoint (UCD GDrive)|
-|-----------------|------:|-------:|------|---------------:|---------:|----------:|-------------:|----------:|-----------|
-| ResNet-50       |   224 |     12 | Adam |                |          |           |              |           | [resnet50_best.pth](https://drive.google.com/file/d/RESNET50_ID/view?usp=sharing) |
-| ResNet-101      |   224 |     12 | Adam |                |          |           |              |           | [resnet101_best.pth](https://drive.google.com/file/d/RESNET101_ID/view?usp=sharing) |
-| MobileNetV3-L   |   224 |     12 | Adam |                |          |           |              |           | [mobilenetv3_best.pth](https://drive.google.com/file/d/MOBILENETV3_ID/view?usp=sharing) |
-| DenseNet-121    |   224 |     12 | Adam |                |          |           |              |           | [densenet121_best.pth](https://drive.google.com/file/d/DENSENET121_ID/view?usp=sharing) |
-| DenseNet-169    |   224 |     12 | Adam |                |          |           |              |           | [densenet169_best.pth](https://drive.google.com/file/d/DENSENET169_ID/view?usp=sharing) |
-| DenseNet-201    |   224 |     12 | Adam |                |          |           |              |           | [densenet201_best.pth](https://drive.google.com/file/d/DENSENET201_ID/view?usp=sharing) |
-| EffNet-B0       |   224 |     12 | Adam |                |          |           |              |           | [efficientnet_b0_best.pth](https://drive.google.com/file/d/EFFNETB0_ID/view?usp=sharing) |
-| EffNet-B1       |   240 |     12 | Adam |                |          |           |              |           | [efficientnet_b1_best.pth](https://drive.google.com/file/d/EFFNETB1_ID/view?usp=sharing) |
-| InceptionV3     |   299 |     12 | Adam |                |          |           |              |           | [inceptionv3_best.pth](https://drive.google.com/file/d/INCEPTIONV3_ID/view?usp=sharing) |
-| Inc-ResNet-v2   |   299 |     12 | Adam |                |          |           |              |           | [inception_resnet_v2_best.pth](https://drive.google.com/file/d/INCRESNETV2_ID/view?usp=sharing) |
-| ConvNeXt-T/S/B  |   384 |     12 | AdamW|                |          |           |              |           | [convnext_384best.pth](https://drive.google.com/file/d/CONVNEXT384_ID/view?usp=sharing) |
+| Model               | Input | Epochs | Optim | Val Acc (best) | Test Acc | Macro AUC | Weighted AUC | Micro AUC | Checkpoint (UCD GDrive) |
+|--------------------|------:|-------:|------|---------------:|---------:|----------:|-------------:|----------:|-------------------------|
+| ResNet-50           | 224   | 12     | Adam | 0.9175         | 0.9091   | 0.9867    | 0.9855       | 0.9900    | [resnet50_best.pth](https://drive.google.com/file/d/RESNET50_ID/view?usp=sharing) |
+| ResNet-101          | 224   | 12     | Adam | 0.9175         | 0.9471   | 0.9910    | 0.9902       | 0.9931    | [resnet101_best.pth](https://drive.google.com/file/d/RESNET101_ID/view?usp=sharing) |
+| MobileNetV3-L       | 224   | 12     | Adam | 0.9260         | 0.9197   | 0.9858    | 0.9845       | 0.9895    | [mobilenetv3_best.pth](https://drive.google.com/file/d/MOBILENETV3_ID/view?usp=sharing) |
+| DenseNet-121        | 224   | 12     | Adam | 0.9366         | 0.9302   | 0.9936    | 0.9930       | 0.9952    | [densenet121_best.pth](https://drive.google.com/file/d/DENSENET121_ID/view?usp=sharing) |
+| DenseNet-169        | 224   | 12     | Adam | 0.9345         | 0.9302   | 0.9914    | 0.9905       | 0.9936    | [densenet169_best.pth](https://drive.google.com/file/d/DENSENET169_ID/view?usp=sharing) |
+| DenseNet-201        | 224   | 12     | Adam | 0.9323         | 0.9281   | 0.9905    | 0.9896       | 0.9934    | [densenet201_best.pth](https://drive.google.com/file/d/DENSENET201_ID/view?usp=sharing) |
+| EfficientNet-B0     | 224   | 12     | Adam | 0.9175         | 0.9281   | 0.9882    | 0.9871       | 0.9910    | [efficientnet_b0_best.pth](https://drive.google.com/file/d/EFFNETB0_ID/view?usp=sharing) |
+| EfficientNet-B1     | 240   | 12     | Adam | 0.9260         | 0.9112   | 0.9863    | 0.9850       | 0.9905    | [efficientnet_b1_best.pth](https://drive.google.com/file/d/EFFNETB1_ID/view?usp=sharing) |
+| InceptionV3         | 299   | 12     | Adam | 0.9281         | 0.9302   | 0.9904    | 0.9895       | 0.9919    | [inceptionv3_best.pth](https://drive.google.com/file/d/INCEPTIONV3_ID/view?usp=sharing) |
+| Inception-ResNet-v2 | 299   | 12     | Adam | 0.9302         | 0.9408   | 0.9910    | 0.9901       | 0.9936    | [inception_resnet_v2_best.pth](https://drive.google.com/file/d/INCRESNETV2_ID/view?usp=sharing) |
+| ConvNeXt-T/S/B       | 384   | 12     | AdamW| 0.9345         | 0.9302   | 0.9859    | 0.9847       | 0.9890    | [convnext_384best.pth](https://drive.google.com/file/d/CONVNEXT384_ID/view?usp=sharing) |
 
 ---
 
