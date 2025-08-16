@@ -175,4 +175,4 @@ pip install torch torchvision timm opencv-python-headless streamlit pillow numpy
 - **Results**: The predicted class and confidence percentage are shown.
 
 ### Example Interface
-<p align="center"> <img width="600" alt="streamlit_gui_example" src="images/gui_example.jpg"> </p>
+<video src="demo.mp4" controls></video>
