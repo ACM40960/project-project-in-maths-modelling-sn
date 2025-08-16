@@ -143,8 +143,11 @@ Per model:
    <img src="images/Confusion Matrices.png" alt="Confusion Matrices" width="800"/>
 </p>
 
-- **AUC (OVR)**: macro / weighted / micro (safe for missing classes)
 - **ROC curves** (per class)
+    <p align="center">
+   <img src="images/ROC.png" alt="ROC Curves" width="800"/>
+</p>
+
 - **Train/Val curves** (acc, loss)
 ---
 
