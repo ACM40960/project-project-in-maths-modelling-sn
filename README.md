@@ -139,6 +139,9 @@ All use the same split protocol and training loop style (Adam/AdamW, ReduceLROnP
 Per model:
 - **Classification report** (precision/recall/F1 per class)
 - **Confusion matrix**
+  <p align="center">
+   <img src="images/Confusion Matrices.png" alt="Confusion Matrices" width="800"/>
+</p>
 - **AUC (OVR)**: macro / weighted / micro (safe for missing classes)
 - **ROC curves** (per class)
 - **Train/Val curves** (acc, loss)
