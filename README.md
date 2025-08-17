@@ -243,7 +243,7 @@ pip install torch torchvision timm opencv-python-headless streamlit pillow numpy
 
 ### Launch the GUI
 ```bash
-streamlit run frontend_fundus.py
+streamlit run app/frontend_fundus.py
 ```
 ### Using the GUI
 
