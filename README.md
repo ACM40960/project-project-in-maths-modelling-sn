@@ -4,17 +4,20 @@
 ## Table of Contents
 
 - [1) Overview](#1-overview)
-- [2) Data & Preprocessing](#2-data--preprocessing)
+- [2) Project Flow and Structure](#2-project-flow-and-structure)
+  - [Project Flow](#project-flow)
+  - [Project Structure](#project-structure)
+- [3) Data & Preprocessing](#3-data--preprocessing)
   - [Core preprocessing steps (fundus-specific)](#core-preprocessing-steps-fundus-specific)
   - [Parallel processing](#parallel-processing)
-- [3) Model Zoo (current)](#3-model-zoo-current)
-- [4) Training Recipes](#4-training-recipes)
-- [5) Fundus Image Classification Models - Results](#5-fundus-image-classification-models---results)
-- [6) Evaluation](#6-evaluation)
+- [4) Model Zoo (current)](#4-model-zoo-current)
+- [5) Training Recipes](#5-training-recipes)
+- [6) Fundus Image Classification Models - Results](#6-fundus-image-classification-models---results)
+- [7) Evaluation](#7-evaluation)
   - [Confusion matrix](#confusion-matrix)
   - [ROC curves (per class)](#roc-curves-per-class)
   - [Training and Validation Performance curves (acc-loss)](#training-and-validation-performance-curves-acc-loss)
-- [7) GUI](#7-gui)
+- [8) GUI](#8-gui)
   - [Features](#features)
   - [Installation](#installation)
   - [Launch the GUI](#launch-the-gui)
@@ -33,6 +36,45 @@ OcuScan’s integrated workflow encompasses image enhancement (ROI crop, illumin
 
 By combining best practices in medical image preprocessing and deep learning model development, OcuScan delivers a clinical-grade solution for multi-disease retinal analysis, supporting both research and real-world deployment.
 
+---
+
+## 2) Project Flow and Structure
+
+### Project Flow
+<p align="center">
+<img width="350" height="350" alt="download" src="project_flow.png" />
+</p>
+
+### Project Structure
+```bash 
+project-project-in-maths-modelling-sn/
+├── dataset/                        # Raw/master dataset files
+├── preprocessed224_best/           # Preprocessed 224x224 images
+├── preprocessed299_inception/      # Preprocessed 299x299 images
+├── preprocessed384_best/           # Preprocessed 384x384 images
+├── images/                         # Visualizations and plots
+│   ├── confusionmatrix/            # Confusion matrices
+│   ├── accuracy_loss/              # Training/validation accuracy & loss plots
+│   ├── roc_curves/                 # ROC curve plots
+│   ├── count/                      # Count plots for class distribution
+├── notebooks/                      # Jupyter notebooks
+│   ├── ConvNext.ipynb
+│   ├── DenseNet.ipynb
+│   ├── EfficientNet.ipynb
+│   ├── Inception.ipynb
+│   ├── Preprocessing.ipynb
+│   ├── ResNet-50_101.ipynb
+│   ├── VisionTransformer.ipynb
+│   ├── MobileNet.ipynb
+├── app/                            # Streamlit GUI frontend
+│   ├── frontend_fundus.py
+├── poster/                          # Project poster
+│   ├── Poster.pdf
+├── literature_review/              # References and review papers
+│   ├── Literature_review.pdf
+├── requirements.txt                # Python package dependencies
+├── README.md                       # Project documentation
+```
 ---
 
 ## 2) Data & Preprocessing
