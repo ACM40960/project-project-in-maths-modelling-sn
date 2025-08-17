@@ -176,22 +176,23 @@ All use the same split protocol and training loop style (Adam/AdamW, ReduceLROnP
 
 ## 5) Fundus Image Classification Models - Results
 
-| Model               | Input | Epochs | Optim | Val Acc (best) | Test Acc | Macro AUC | Weighted AUC | Micro AUC | Checkpoint (UCD GDrive) |
-|--------------------|------:|-------:|------|---------------:|---------:|----------:|-------------:|----------:|-------------------------|
-| ResNet-50           | 224   | 12     | Adam | 0.9175         | 0.9091   | 0.9867    | 0.9855       | 0.9900    | [resnet50_best.pth](https://drive.google.com/file/d/RESNET50_ID/view?usp=sharing) |
-| ResNet-101          | 224   | 12     | Adam | 0.9175         | 0.9133   | 0.9888    | 0.9878       | 0.9915   | [resnet101_best.pth](https://drive.google.com/file/d/RESNET101_ID/view?usp=sharing) |
-| MobileNetV3-L       | 224   | 12     | Adam | 0.9281         | 0.9218   | 0.9887    | 0.9876       | 0.9922    | [mobilenetv3_best.pth](https://drive.google.com/file/d/MOBILENETV3_ID/view?usp=sharing) |
-| DenseNet-121        | 224   | 12     | Adam | 0.9366         | 0.9302   | 0.9936    | 0.9930       | 0.9952    | [densenet121_best.pth](https://drive.google.com/file/d/DENSENET121_ID/view?usp=sharing) |
-| DenseNet-169        | 224   | 12     | Adam | 0.9345         | 0.9302   | 0.9914    | 0.9905       | 0.9936    | [densenet169_best.pth](https://drive.google.com/file/d/DENSENET169_ID/view?usp=sharing) |
-| DenseNet-201        | 224   | 12     | Adam | 0.9323         | 0.9281   | 0.9905    | 0.9896       | 0.9934    | [densenet201_best.pth](https://drive.google.com/file/d/DENSENET201_ID/view?usp=sharing) |
-| EfficientNet-B0     | 224   | 12     | Adam | 0.9175         | 0.9281   | 0.9882    | 0.9871       | 0.9910    | [efficientnet_b0_best.pth](https://drive.google.com/file/d/EFFNETB0_ID/view?usp=sharing) |
-| EfficientNet-B1     | 240   | 12     | Adam | 0.9260         | 0.9112   | 0.9863    | 0.9850       | 0.9905    | [efficientnet_b1_best.pth](https://drive.google.com/file/d/EFFNETB1_ID/view?usp=sharing) |
-| InceptionV3         | 299   | 12     | Adam | 0.9281         | 0.9302   | 0.9904    | 0.9895       | 0.9919    | [inceptionv3_best.pth](https://drive.google.com/file/d/INCEPTIONV3_ID/view?usp=sharing) |
-| Inception-ResNet-v2 | 299   | 12     | Adam | 0.9302         | 0.9408   | 0.9910    | 0.9901       | 0.9936    | [inception_resnet_v2_best.pth](https://drive.google.com/file/d/INCRESNETV2_ID/view?usp=sharing) |
-| ConvNeXt-T/S/B       | 384   | 12     | AdamW| 0.9345         | 0.9302   | 0.9859    | 0.9847       | 0.9890    | [convnext_384best.pth](https://drive.google.com/file/d/CONVNEXT384_ID/view?usp=sharing) |
-| ViT-B/16            | 224   | 12     | AdamW| 0.9175         | 0.9133   | 0.9804    | 0.9786       | 0.9815    | [vitb16_best.pth](#) |
+| Model               | Input | Epochs | Optim | Val Acc (best) | Test Acc | Precision | Recall | F1-score | Macro AUC | Weighted AUC | Micro AUC | Checkpoint (UCD GDrive) |
+|---------------------|------:|-------:|-------|---------------:|---------:|----------:|-------:|---------:|----------:|-------------:|----------:|-------------------------|
+| ResNet-50           | 224   | 12     | Adam  | 0.9175         | 0.9091   | 0.9177    | 0.9172 | 0.9173   | 0.9867    | 0.9855       | 0.9900    | [resnet50_best.pth](https://drive.google.com/file/d/RESNET50_ID/view?usp=sharing) |
+| ResNet-101          | 224   | 12     | Adam  | 0.9175         | 0.9133   | 0.9218    | 0.9206 | 0.9208   | 0.9888    | 0.9878       | 0.9915    | [resnet101_best.pth](https://drive.google.com/file/d/RESNET101_ID/view?usp=sharing) |
+| MobileNetV3-L       | 224   | 12     | Adam  | 0.9281         | 0.9197   | 0.9292    | 0.9262 | 0.9266   | 0.9858    | 0.9845       | 0.9895    | [mobilenetv3_best.pth](https://drive.google.com/file/d/MOBILENETV3_ID/view?usp=sharing) |
+| DenseNet-121        | 224   | 12     | Adam  | 0.9366         | 0.9302   | 0.9376    | 0.9359 | 0.9358   | 0.9936    | 0.9930       | 0.9952    | [densenet121_best.pth](https://drive.google.com/file/d/DENSENET121_ID/view?usp=sharing) |
+| DenseNet-169        | 224   | 12     | Adam  | 0.9345         | 0.9302   | 0.9371    | 0.9362 | 0.9363   | 0.9914    | 0.9905       | 0.9936    | [densenet169_best.pth](https://drive.google.com/file/d/DENSENET169_ID/view?usp=sharing) |
+| DenseNet-201        | 224   | 12     | Adam  | 0.9323         | 0.9281   | 0.9344    | 0.9341 | 0.9341   | 0.9905    | 0.9896       | 0.9934    | [densenet201_best.pth](https://drive.google.com/file/d/DENSENET201_ID/view?usp=sharing) |
+| EfficientNet-B0     | 224   | 12     | Adam  | 0.9175         | 0.9281   | 0.9350    | 0.9345 | 0.9346   | 0.9882    | 0.9871       | 0.9910    | [efficientnet_b0_best.pth](https://drive.google.com/file/d/EFFNETB0_ID/view?usp=sharing) |
+| EfficientNet-B1     | 240   | 12     | Adam  | 0.9260         | 0.9112   | 0.9208    | 0.9192 | 0.9196   | 0.9863    | 0.9850       | 0.9905    | [efficientnet_b1_best.pth](https://drive.google.com/file/d/EFFNETB1_ID/view?usp=sharing) |
+| InceptionV3         | 299   | 12     | Adam  | 0.9281         | 0.9302   | 0.9402    | 0.9355 | 0.9353   | 0.9904    | 0.9895       | 0.9919    | [inceptionv3_best.pth](https://drive.google.com/file/d/INCEPTIONV3_ID/view?usp=sharing) |
+| Inception-ResNet-v2 | 299   | 12     | Adam  | 0.9302         | 0.9408   | 0.9444    | 0.9457 | 0.9448   | 0.9910    | 0.9901       | 0.9936    | [inception_resnet_v2_best.pth](https://drive.google.com/file/d/INCRESNETV2_ID/view?usp=sharing) |
+| ConvNeXt-T/S/B      | 384   | 12     | AdamW | 0.9345         | 0.9302   | 0.9367    | 0.9357 | 0.9354   | 0.9859    | 0.9847       | 0.9890    | [convnext_384best.pth](https://drive.google.com/file/d/CONVNEXT384_ID/view?usp=sharing) |
+| ViT-B/16            | 224   | 12     | AdamW | 0.9175         | 0.9133   | 0.9218    | 0.9204 | 0.9205   | 0.9804    | 0.9786       | 0.9815    | [vitb16_best.pth](#) |
 
-Across multiple architectures trained for 12 epochs, Inception-ResNet-v2 delivered the best test accuracy (94.1%) with strong AUCs, while DenseNet-121 achieved the strongest balance with 93.7% validation accuracy, 93.0% test accuracy, and the highest macro/weighted AUC (0.9936/0.9930). Lightweight models like MobileNetV3-L performed competitively (92.2% test accuracy), and deeper variants like DenseNet-169/201 and ConvNeXt also maintained robust generalization. Transformer-based ViT-B/16 underperformed relative to CNNs, highlighting CNN dominance in fundus image classification. Overall, DenseNet and Inception-ResNet architectures proved most effective, while EfficientNet and MobileNet offered efficient alternatives with solid accuracy.
+
+Across multiple architectures trained for 12 epochs, Inception-ResNet-v2 delivered the best test accuracy (94.1%) with the highest macro F1-score (0.9448) and strong AUCs (macro 0.9910, micro 0.9936). DenseNet-121 achieved the best overall balance, with 93.7% validation accuracy, 93.0% test accuracy, excellent precision/recall/F1 (0.9376/0.9359/0.9358) and the strongest macro/weighted AUC (0.9936/0.9930). Other DenseNet variants (169/201) and ConvNeXt also maintained robust generalization with F1-scores above 0.934. Lightweight models like MobileNetV3-L performed competitively (92.0% test F1, 92.2% accuracy) and represent efficient alternatives. While InceptionV3 (93.0% accuracy, F1 = 0.9353) also ranked among the top CNNs, transformer-based ViT-B/16 underperformed relative to CNNs (91.3% accuracy, F1 = 0.9205). Overall, DenseNet and Inception-ResNet architectures proved most effective, while EfficientNet and MobileNet offered accuracy–efficiency tradeoffs suitable for practical deployment.
 
 ---
 
