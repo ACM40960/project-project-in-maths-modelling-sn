@@ -132,7 +132,7 @@ All use the same split protocol and training loop style (Adam/AdamW, ReduceLROnP
 | ConvNeXt-T/S/B       | 384   | 12     | AdamW| 0.9345         | 0.9302   | 0.9859    | 0.9847       | 0.9890    | [convnext_384best.pth](https://drive.google.com/file/d/CONVNEXT384_ID/view?usp=sharing) |
 | ViT-B/16            | 224   | 12     | AdamW| 0.9175         | 0.9133   | 0.9804    | 0.9786       | 0.9815    | [vitb16_best.pth](#) |
 
-
+Across multiple architectures trained for 12 epochs, Inception-ResNet-v2 delivered the best test accuracy (94.1%) with strong AUCs, while DenseNet-121 achieved the strongest balance with 93.7% validation accuracy, 93.0% test accuracy, and the highest macro/weighted AUC (0.9936/0.9930). Lightweight models like MobileNetV3-L performed competitively (92.2% test accuracy), and deeper variants like DenseNet-169/201 and ConvNeXt also maintained robust generalization. Transformer-based ViT-B/16 underperformed relative to CNNs, highlighting CNN dominance in fundus image classification. Overall, DenseNet and Inception-ResNet architectures proved most effective, while EfficientNet and MobileNet offered efficient alternatives with solid accuracy.
 ---
 
 ## 6) Evaluation
