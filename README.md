@@ -159,21 +159,21 @@ Across multiple architectures trained for 12 epochs, Inception-ResNet-v2 deliver
 
 ## 6) Evaluation
 
-- **Confusion matrix**
+### **Confusion matrix**
 <p align="center">
    <img src="images/Confusion Matrices.png" alt="Confusion Matrices" width="700"/>
 </p>
 
 The confusion matrices for the tested models reveal strong classification performance across all disease categories, with most models correctly identifying the majority of cases in each class. Diabetic retinopathy and normal fundus images show particularly high true positive rates, while cataract and glaucoma have occasional misclassifications, most frequently with normal and each other. Inception-ResNet-v2 and DenseNet variants consistently demonstrate minimal confusion among classes, maintaining clarity in distinguishing between retinal pathologies. Overall, these results highlight the capability for reliable, multi-disease detection with low error rates and high diagnostic precision across advanced deep learning architectures.
 
-- **ROC curves** (per class)
+### **ROC curves** (per class)
 <p align="center">
    <img src="images/ROC.png" alt="ROC Curves" width="700"/>
 </p>
 
 The ROC curve plots for all tested models demonstrate outstanding discriminatory ability in fundus image classification, with each disease class achieving high AUC values close to 1.0. These curves show that OcuScan’s approach yields excellent sensitivity and specificity across a diverse set of deep learning architectures. Inception-ResNet-v2, DenseNet and EfficientNet models consistently deliver superior separability for diabetic retinopathy, cataract, glaucoma, ARMD and normal cases, indicating that true and false positive rates are well balanced at various thresholds.
 
-- **Training and Validation Performance curves** (acc, loss)
+### **Training and Validation Performance curves** (acc, loss)
 <p align="center">
    <img src="images/Plots.png" alt="ROC Curves" width="700"/>
 </p>
