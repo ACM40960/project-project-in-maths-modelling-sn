@@ -23,7 +23,9 @@
   - [Launch the GUI](#launch-the-gui)
   - [Using the GUI](#using-the-gui)
   - [Example Interface](#example-interface)
- 
+- [9) Project Poster](#project-poster)
+- [10) References](#references)
+- [11) Contact](#contact)
 ---
 
 ## 1) Overview
@@ -64,16 +66,14 @@ project-project-in-maths-modelling-sn/
 │   ├── MobileNet.ipynb
 ├── app/                            # Streamlit GUI frontend
 │   ├── frontend_fundus.py
-├── poster/                          # Project poster
-│   ├── Poster.pdf
-├── literature_review/              # References and review papers
-│   ├── Literature_review.pdf
+├── Poster.pdf                      # Project poster
+├── literature_review.pdf           # References and review papers
 ├── requirements.txt                # Python package dependencies
 ├── README.md                       # Project documentation
 ```
 ---
 
-## 2) Data & Preprocessing
+## 3) Data & Preprocessing
 The dataset contains **4,728 fundus images** across five classes:  
 
 - **Diabetic retinopathy**: 1,098 samples (23.2%)  
@@ -140,7 +140,7 @@ All steps occur in **`preprocess_fundus(img_bgr, size)`** in this order:
 
 ---
 
-## 3) Model Zoo (current)
+## 4) Model Zoo (current)
 
 All use the same split protocol and training loop style (Adam/AdamW, ReduceLROnPlateau on **val acc**, AMP).
 
@@ -164,7 +164,7 @@ All use the same split protocol and training loop style (Adam/AdamW, ReduceLROnP
 
 ---
 
-## 4) Training Recipes
+## 5) Training Recipes
 
 - **Optimizers**
   - CNNs/ResNet/EfficientNet/Inception: **Adam(lr=1e-4)**
@@ -183,15 +183,15 @@ All use the same split protocol and training loop style (Adam/AdamW, ReduceLROnP
 ---
 
 
-## 5) Fundus Image Classification Models - Results
+## 6) Fundus Image Classification Models - Results
 
 | Model               | Input | Epochs | Optim | Val Acc (best) | Test Acc | Precision | Recall | F1-score | Macro AUC | Weighted AUC | Micro AUC | Checkpoint (UCD GDrive) |
 |---------------------|------:|-------:|-------|---------------:|---------:|----------:|-------:|---------:|----------:|-------------:|----------:|-------------------------|
 | ResNet-50           | 224   | 12     | Adam  | 0.9175         | 0.9091   | 0.9177    | 0.9172 | 0.9173   | 0.9867    | 0.9855       | 0.9900    | [resnet50_best.pth](https://drive.google.com/file/d/RESNET50_ID/view?usp=sharing) |
 | ResNet-101          | 224   | 12     | Adam  | 0.9175         | 0.9133   | 0.9218    | 0.9206 | 0.9208   | 0.9888    | 0.9878       | 0.9915    | [resnet101_best.pth](https://drive.google.com/file/d/RESNET101_ID/view?usp=sharing) |
 | MobileNetV3-L       | 224   | 12     | Adam  | 0.9281         | 0.9197   | 0.9292    | 0.9262 | 0.9266   | 0.9858    | 0.9845       | 0.9895    | [mobilenetv3_best.pth](https://drive.google.com/file/d/MOBILENETV3_ID/view?usp=sharing) |
-| DenseNet-121        | 224   | 12     | Adam  | 0.9366         | 0.9302   | 0.9376    | 0.9359 | 0.9358   | 0.9936    | 0.9930       | 0.9952    | [densenet121_best.pth](https://drive.google.com/file/d/DENSENET121_ID/view?usp=sharing) |
-| DenseNet-169        | 224   | 12     | Adam  | 0.9345         | 0.9302   | 0.9371    | 0.9362 | 0.9363   | 0.9914    | 0.9905       | 0.9936    | [densenet169_best.pth](https://drive.google.com/file/d/DENSENET169_ID/view?usp=sharing) |
+| DenseNet-121        | 224   | 12     | Adam  | 0.9366         | 0.9307   | 0.9376    | 0.9359 | 0.9358   | 0.9936    | 0.9930       | 0.9952    | [densenet121_best.pth](https://drive.google.com/file/d/DENSENET121_ID/view?usp=sharing) |
+| DenseNet-169        | 224   | 12     | Adam  | 0.9345         | 0.9305   | 0.9371    | 0.9362 | 0.9363   | 0.9914    | 0.9905       | 0.9936    | [densenet169_best.pth](https://drive.google.com/file/d/DENSENET169_ID/view?usp=sharing) |
 | DenseNet-201        | 224   | 12     | Adam  | 0.9323         | 0.9281   | 0.9344    | 0.9341 | 0.9341   | 0.9905    | 0.9896       | 0.9934    | [densenet201_best.pth](https://drive.google.com/file/d/DENSENET201_ID/view?usp=sharing) |
 | EfficientNet-B0     | 224   | 12     | Adam  | 0.9175         | 0.9281   | 0.9350    | 0.9345 | 0.9346   | 0.9882    | 0.9871       | 0.9910    | [efficientnet_b0_best.pth](https://drive.google.com/file/d/EFFNETB0_ID/view?usp=sharing) |
 | EfficientNet-B1     | 240   | 12     | Adam  | 0.9260         | 0.9112   | 0.9208    | 0.9192 | 0.9196   | 0.9863    | 0.9850       | 0.9905    | [efficientnet_b1_best.pth](https://drive.google.com/file/d/EFFNETB1_ID/view?usp=sharing) |
@@ -205,7 +205,7 @@ Across multiple architectures trained for 12 epochs, Inception-ResNet-v2 deliver
 
 ---
 
-## 6) Evaluation
+## 7) Evaluation
 
 ### **Confusion matrix**
 <p align="center">
@@ -229,7 +229,7 @@ The ROC curve plots for all tested models demonstrate outstanding discriminatory
 The training curves for OcuScan’s models illustrate efficient convergence, with losses consistently decreasing and accuracies rapidly increasing across epochs for both training and validation sets. While training accuracy approaches 1.0 for all models, validation accuracy stabilizes between 0.91 and 0.94, reflecting minimal overfitting. Validation loss remains relatively steady, supporting the pipeline’s reliability and reproducibility. These results collectively demonstrate effective optimization and sustained performance throughout training.
 
 ---
-## 7) GUI
+## 8) GUI
 OcuScan provides a **Streamlit-based GUI** for single-image fundus classification using the **best model: Inception-ResNet-v2**.
 
 ### Features
@@ -266,3 +266,21 @@ streamlit run app/frontend_fundus.py
 <p align="center">
    <img src="images/gui_example.jpg" alt="GUI_Interface_example" width="700"/>
 </p>
+
+---
+
+## 9) Project Poster
+
+[**Download the Poster (PDF)**](Poster.pdf)
+
+---
+
+## 10) References
+
+- Y. Li, Q. Lao, Q. Kang, Z. Jiang, S. Du, S. Zhang, and K. Li, “Self-supervised anomaly detection, staging and segmentation for retinal images,” Medical Image Analysis, vol. 87, p. 102805, 2023.
+- A. Bhati, N. Gour, P. Khanna, and A. Ojha, “Discriminative kernel convolution network for multi-label ophthalmic disease detection on imbalanced fundus image dataset,” Computers in Biology and Medicine, vol. 153, p. 106519, 2023.
+- O. Sivaz and M. Aykut, “Combining efficientnet with ml-decoder classification head for multi-label retinal disease classification,” Neural Computing and Applications, vol. 36, no. 23, pp. 14251–14261, 2024.
+
+## 11) Contact
+- Sudhanshu Nerkar - sudhanshu.nerkar@ucdconnect.ie
+- Vedarth Kumtekar - vedarth.rajukumtekar@ucdconnect.ie
