@@ -133,27 +133,35 @@ All use the same split protocol and training loop style (Adam/AdamW, ReduceLROnP
 | ViT-B/16            | 224   | 12     | AdamW| 0.9175         | 0.9133   | 0.9804    | 0.9786       | 0.9815    | [vitb16_best.pth](#) |
 
 Across multiple architectures trained for 12 epochs, Inception-ResNet-v2 delivered the best test accuracy (94.1%) with strong AUCs, while DenseNet-121 achieved the strongest balance with 93.7% validation accuracy, 93.0% test accuracy, and the highest macro/weighted AUC (0.9936/0.9930). Lightweight models like MobileNetV3-L performed competitively (92.2% test accuracy), and deeper variants like DenseNet-169/201 and ConvNeXt also maintained robust generalization. Transformer-based ViT-B/16 underperformed relative to CNNs, highlighting CNN dominance in fundus image classification. Overall, DenseNet and Inception-ResNet architectures proved most effective, while EfficientNet and MobileNet offered efficient alternatives with solid accuracy.
+
 ---
 
 ## 6) Evaluation
 
 Per model:
 - **Classification report** (precision/recall/F1 per class)
+
 - **Confusion matrix**
 <p align="center">
    <img src="images/Confusion Matrices.png" alt="Confusion Matrices" width="700"/>
 </p>
+
+The confusion matrices for the tested models reveal strong classification performance across all disease categories, with most models correctly identifying the majority of cases in each class. Diabetic retinopathy and normal fundus images show particularly high true positive rates, while cataract and glaucoma have occasional misclassifications, most frequently with normal and each other. Inception-ResNet-v2 and DenseNet variants consistently demonstrate minimal confusion among classes, maintaining clarity in distinguishing between retinal pathologies. Overall, these results highlight the capability for reliable, multi-disease detection with low error rates and high diagnostic precision across advanced deep learning architectures.
 
 - **ROC curves** (per class)
 <p align="center">
    <img src="images/ROC.png" alt="ROC Curves" width="700"/>
 </p>
 
-- **Train/Val curves** (acc, loss)
+The ROC curve plots for all tested models demonstrate outstanding discriminatory ability in fundus image classification, with each disease class achieving high AUC values close to 1.0. These curves show that OcuScan’s approach yields excellent sensitivity and specificity across a diverse set of deep learning architectures. Inception-ResNet-v2, DenseNet and EfficientNet models consistently deliver superior separability for diabetic retinopathy, cataract, glaucoma, ARMD and normal cases, indicating that true and false positive rates are well balanced at various thresholds.
+
+- **Training and Validation Performance curves** (acc, loss)
 <p align="center">
    <img src="images/Plots.png" alt="ROC Curves" width="700"/>
 </p>
 ---
+
+The training curves for OcuScan’s models illustrate efficient convergence, with losses consistently decreasing and accuracies rapidly increasing across epochs for both training and validation sets. While training accuracy approaches 1.0 for all models, validation accuracy stabilizes between 0.91 and 0.94, reflecting minimal overfitting. Validation loss remains relatively steady, supporting the pipeline’s reliability and reproducibility. These results collectively demonstrate effective optimization and sustained performance throughout training.
 
 ## 7) GUI
 OcuScan provides a **Streamlit-based GUI** for single-image fundus classification using the **best model: Inception-ResNet-v2**.
