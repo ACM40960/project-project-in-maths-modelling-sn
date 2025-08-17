@@ -138,9 +138,6 @@ Across multiple architectures trained for 12 epochs, Inception-ResNet-v2 deliver
 
 ## 6) Evaluation
 
-Per model:
-- **Classification report** (precision/recall/F1 per class)
-
 - **Confusion matrix**
 <p align="center">
    <img src="images/Confusion Matrices.png" alt="Confusion Matrices" width="700"/>
@@ -159,10 +156,10 @@ The ROC curve plots for all tested models demonstrate outstanding discriminatory
 <p align="center">
    <img src="images/Plots.png" alt="ROC Curves" width="700"/>
 </p>
----
 
 The training curves for OcuScan’s models illustrate efficient convergence, with losses consistently decreasing and accuracies rapidly increasing across epochs for both training and validation sets. While training accuracy approaches 1.0 for all models, validation accuracy stabilizes between 0.91 and 0.94, reflecting minimal overfitting. Validation loss remains relatively steady, supporting the pipeline’s reliability and reproducibility. These results collectively demonstrate effective optimization and sustained performance throughout training.
 
+---
 ## 7) GUI
 OcuScan provides a **Streamlit-based GUI** for single-image fundus classification using the **best model: Inception-ResNet-v2**.
 
