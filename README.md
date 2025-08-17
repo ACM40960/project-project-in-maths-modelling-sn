@@ -1,15 +1,16 @@
 # OcuScan - Retinal Fundus Classification
 
-Comprehensive pipeline for fundus-image classification with a consistent **80/10/10 stratified split**, a robust **preprocessing** stack, mixed-precision **training**, and a **Streamlit GUI** for inference.  
-
 ---
 
 ## 1) Overview
 
-- Robust fundus preprocessing (ROI crop → shade correction → color constancy → CLAHE (G & L) → adaptive gamma → unsharp → letterbox+resize).
-- Model zoo across **224/240/299/384** input sizes.
-- **AMP** everywhere, checkpoint on **best val accuracy**, reproducible splits (`SEED=42`).
-- Reports: **classification report**, **confusion matrix**, **ROC curves**, **AUC (macro/weighted/micro)**, **train/val curves**.
+OcuScan is an end-to-end deep learning pipeline designed for the automated classification of retinal fundus images. Built to support ophthalmologists and streamline disease screening, OcuScan offers robust preprocessing, state-of-the-art model architectures, efficient training strategies and an intuitive GUI for point-of-care inference.
+
+The system tackles clinical challenges such as class imbalance and disease diversity by leveraging a carefully balanced dataset, standardized preprocessing steps and advanced models—including ResNet, DenseNet, EfficientNet, Inception, ConvNeXt and Vision Transformer—optimized for input sizes ranging from 224×224 to 384×384. Among these, Inception-ResNet stands out as the best-performing architecture, delivering superior classification accuracy and robustness for retinal fundus images. Mixed-precision training ensures computational efficiency while checkpointing and reproducible stratified splits maintain reliability and transparency. 
+
+OcuScan’s integrated workflow encompasses image enhancement (ROI crop, illumination correction, color normalization, contrast improvement, sharpening and resizing) and thorough evaluation protocols (confusion matrix, classification report, ROC/AUC metrics and training curves). The Streamlit-based frontend provides an accessible interface for rapid, single-image diagnosis using the top-performing multi-class model with automatic preprocessing and real-time confidence scores.
+
+By combining best practices in medical image preprocessing and deep learning model development, OcuScan delivers a clinical-grade solution for multi-disease retinal analysis, supporting both research and real-world deployment.
 
 ---
 
