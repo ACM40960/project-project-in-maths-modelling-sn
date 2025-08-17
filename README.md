@@ -268,19 +268,18 @@ streamlit run app/frontend_fundus.py
 </p>
 
 ---
-
 ## 9) Project Poster
 
 [**Download the Poster (PDF)**](Poster.pdf)
 
 ---
-
 ## 10) References
 
 - Y. Li, Q. Lao, Q. Kang, Z. Jiang, S. Du, S. Zhang, and K. Li, “Self-supervised anomaly detection, staging and segmentation for retinal images,” Medical Image Analysis, vol. 87, p. 102805, 2023.
 - A. Bhati, N. Gour, P. Khanna, and A. Ojha, “Discriminative kernel convolution network for multi-label ophthalmic disease detection on imbalanced fundus image dataset,” Computers in Biology and Medicine, vol. 153, p. 106519, 2023.
 - O. Sivaz and M. Aykut, “Combining efficientnet with ml-decoder classification head for multi-label retinal disease classification,” Neural Computing and Applications, vol. 36, no. 23, pp. 14251–14261, 2024.
 
+---
 ## 11) Contact
 - Sudhanshu Nerkar - sudhanshu.nerkar@ucdconnect.ie
 - Vedarth Kumtekar - vedarth.rajukumtekar@ucdconnect.ie
