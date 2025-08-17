@@ -42,7 +42,7 @@ By combining best practices in medical image preprocessing and deep learning mod
 
 ### Project Flow
 <p align="center">
-<img width="350" height="350" alt="download" src="images/project_flow.png" />
+<img width="600" height="600" alt="download" src="images/project_flow.png" />
 </p>
 
 ### Project Structure
@@ -53,10 +53,6 @@ project-project-in-maths-modelling-sn/
 ├── preprocessed299_inception/      # Preprocessed 299x299 images
 ├── preprocessed384_best/           # Preprocessed 384x384 images
 ├── images/                         # Visualizations and plots
-│   ├── confusionmatrix/            # Confusion matrices
-│   ├── accuracy_loss/              # Training/validation accuracy & loss plots
-│   ├── roc_curves/                 # ROC curve plots
-│   ├── count/                      # Count plots for class distribution
 ├── notebooks/                      # Jupyter notebooks
 │   ├── ConvNext.ipynb
 │   ├── DenseNet.ipynb
