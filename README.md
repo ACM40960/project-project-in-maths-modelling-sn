@@ -74,13 +74,22 @@ project-project-in-maths-modelling-sn/
 ---
 
 ## 2) Data & Preprocessing
-The dataset has 4,728 fundus images across five classes. Most samples are diabetic_retinopathy (23.2%, 1,098), followed by normal (22.7%, 1,074), cataract (22.0%, 1,038), and glaucoma (21.3%, 1,007). ARMD is the smallest class at 10.8% (511). Overall it’s fairly balanced among four classes, with ARMD under-represented (largest:smallest ≈ 2.15×), so class-weighted loss or macro metrics are a good idea.
+The dataset contains **4,728 fundus images** across five classes:  
 
+- **Diabetic retinopathy**: 1,098 samples (23.2%)  
+- **Normal**: 1,074 samples (22.7%)  
+- **Cataract**: 1,038 samples (22.0%)  
+- **Glaucoma**: 1,007 samples (21.3%)  
+- **ARMD**: 511 samples (10.8%)
 
 <p align="center">
 <img width="350" height="350" alt="download" src="images/download (1).png" />
 </p>
 
+Overall, the dataset is fairly balanced across four classes, with **ARMD under-represented** (largest:smallest ≈ 2.15×).  
+This imbalance makes **class-weighted loss functions** or the use of **macro-averaged metrics** (precision, recall, F1) a good choice for evaluation.  
+
+**Dataset source**: [Ocular Disease Recognition (Fundus Images)](https://www.kaggle.com/datasets/amrsalemhelmy/ocular-disease) on *Kaggle*.
 
 ### Core preprocessing steps (fundus-specific)
 All steps occur in **`preprocess_fundus(img_bgr, size)`** in this order:
