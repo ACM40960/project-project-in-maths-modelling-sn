@@ -42,7 +42,7 @@ By combining best practices in medical image preprocessing and deep learning mod
 
 ### Project Flow
 <p align="center">
-<img width="350" height="350" alt="download" src="project_flow.png" />
+<img width="350" height="350" alt="download" src="images/project_flow.png" />
 </p>
 
 ### Project Structure
