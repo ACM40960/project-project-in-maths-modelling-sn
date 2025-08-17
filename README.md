@@ -23,9 +23,9 @@
   - [Launch the GUI](#launch-the-gui)
   - [Using the GUI](#using-the-gui)
   - [Example Interface](#example-interface)
-- [9) Project Poster](#project-poster)
-- [10) References](#references)
-- [11) Contact](#contact)
+- [9) Project Poster](#9-project-poster)
+- [10) References](#10-references)
+- [11) Contact](#11-contact)
 ---
 
 ## 1) Overview
