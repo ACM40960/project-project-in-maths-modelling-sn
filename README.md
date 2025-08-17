@@ -1,5 +1,9 @@
 # OcuScan - Retinal Fundus Classification
 
+<p align="center">
+<img width="600" height="600" alt="download" src="images/logo.png" />
+</p>
+
 ---
 ## Table of Contents
 
