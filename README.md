@@ -1,6 +1,27 @@
 # OcuScan - Retinal Fundus Classification
 
 ---
+## Table of Contents
+
+- [1) Overview](#1-overview)
+- [2) Data & Preprocessing](#2-data--preprocessing)
+  - [Core preprocessing steps (fundus-specific)](#core-preprocessing-steps-fundus-specific)
+  - [Parallel processing](#parallel-processing)
+- [3) Model Zoo (current)](#3-model-zoo-current)
+- [4) Training Recipes](#4-training-recipes)
+- [5) Fundus Image Classification Models - Results](#5-fundus-image-classification-models---results)
+- [6) Evaluation](#6-evaluation)
+  - [Confusion matrix](#confusion-matrix)
+  - [ROC curves (per class)](#roc-curves-per-class)
+  - [Training and Validation Performance curves (acc-loss)](#training-and-validation-performance-curves-acc-loss)
+- [7) GUI](#7-gui)
+  - [Features](#features)
+  - [Installation](#installation)
+  - [Launch the GUI](#launch-the-gui)
+  - [Using the GUI](#using-the-gui)
+  - [Example Interface](#example-interface)
+ 
+---
 
 ## 1) Overview
 
