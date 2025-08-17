@@ -9,3 +9,6 @@ tqdm
 pandas
 numpy
 imagehash
+streamlit 
+os 
+gdown
