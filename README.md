@@ -174,11 +174,18 @@ All use the same split protocol and training loop style (Adam/AdamW, ReduceLROnP
 - **AMP**: `torch.amp.autocast` + `GradScaler`
 - **Checkpoints**: `checkpoints/<model>_best.pth` with `model_state`, `epoch`, `val_acc`, `classes`
 
-**Input roots**
-- 224: `preprocessed224_best`
-- 240 (B1): resize in transform
-- 299 (Inception*): `preprocessed299_inception` or resize
-- 384 (ConvNeXt): `preprocessed384_best`
+- **Input roots**
+  - 224: `preprocessed224_best`
+  - 240 (B1): resize in transform
+  - 299 (Inception*): `preprocessed299_inception` or resize
+  - 384 (ConvNeXt): `preprocessed384_best`
+
+- **Model Architecture - Inception-ResNet-v2**
+<p align="center">
+<img width="700" height="700" alt="Model Architecture" src="images/Neural_Network_Imagw.jpg" />
+</p>
+
+The model takes a 299×299 image as input, passes it through a convolutional stem, then through stacks of Inception-ResNet-A (×5), Reduction-A, Inception-ResNet-B (×10), Reduction-B and Inception-ResNet-C (×5) modules. These specialized blocks combine inception-style multi-scale feature extraction with residual connections, improving both accuracy and training stability. Finally, global average pooling and a fully connected (FC) layer produce the class probabilities (5 classes).
 
 ---
 
