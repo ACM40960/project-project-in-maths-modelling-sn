@@ -150,6 +150,9 @@ Per model:
 </p>
 
 - **Train/Val curves** (acc, loss)
+<p align="center">
+   <img src="images/Plots.png" alt="ROC Curves" width="700"/>
+</p>
 ---
 
 ## 7) GUI
