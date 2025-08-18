@@ -281,7 +281,7 @@ streamlit run app/frontend_fundus.py
 ---
 ## 9) Project Poster
 
-[**Download the Poster (PDF)**](Poster.pdf)
+[**Download the Poster (PDF)**](poster.pdf)
 
 ---
 ## 10) References
